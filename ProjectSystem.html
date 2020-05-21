@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		.sd-container {
+		  position: relative;
+		  float: left;
+		}
+		
+		.sd {
+		  border: 1px solid #1cbaa5;
+		  padding: 5px 0px;
+		  height: 30px;
+		  width: 160px;
+		}
+		
+		.open-button {
+		  position: absolute;
+		  top: 5px;
+		  right: 3px;
+		  width: 20px;
+		  height: 20px;
+		  background: #fff;
+		  pointer-events: none;
+		}
+		
+		.open-button button {
+		  border: none;
+		  background: transparent;
+		}
+		.column {
+			width: 400px;
+			display: flex;
+			justify-content: space-between;
+			
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+
+		#main {
+		/* width: 400px; */
+		border: 1px solid #c3c3c3;
+		display: flex;
+		justify-content: space-between;
+		}
+
+		#main div {
+		width: 70px;
+		}
+		</style>
+<head>
+	<title>Login V15</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+<ul>
+	<li><a href="Home.html">Home</a></li>
+	<li><a href="AdminSystemHome.html">AdminSystemHome</a></li>
+	<li style="float:right"><a class="active" href="Home.html">Sign Out</a></li>
+  </ul>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Project System
+					</span>
+				</div>
+
+				<form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="ProjectName is required">
+						<span class="label-input100">ProjectName</span>
+						<input class="input100" type="text" name="ProjectName" placeholder="Enter ProjectName">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">ProjectType</span>
+						<select class="input100" name="plan" id="plan" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a ProjectType 
+						</option> 
+							<option value="Type1">Type 1</option> 
+							<option value="Type2">Type 2</option> 
+							<option value="Type3">Type 3</option> 
+							<option value="Type4">Type 4</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Address is required">
+						<span class="label-input100">Address</span>
+						<input class="input100" type="text" name="Address" placeholder="Enter Address">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Province is required">
+						<span class="label-input100">Province</span>
+						<input class="input100" type="text" name="Province" placeholder="Enter Province">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="District is required">
+						<span class="label-input100">District</span>
+						<input class="input100" type="text" name="District" placeholder="Enter District">
+						<span class="focus-input100"></span>
+					</div>
+					<!-- <div style="size: 10%;">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Room Number is required" style="size: 10%;">
+						<span class="label-input100">Room Number</span>
+						<input class="input100" type="text" name="RoomNumber" placeholder="Room Number LastName">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Room Number is required" style="size: 10%;">
+						<span class="label-input100">Room Number</span>
+						<input class="input100" type="text" name="RoomNumber" placeholder="Room Number LastName">
+						<span class="focus-input100"></span>
+					</div>
+					</div> -->
+					
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="SubDistrict is required">
+						<span class="label-input100">SubDistrict</span>
+						<input class="input100" type="text" name="SubDistrict" placeholder="Enter SubDistrict">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Telephone Number is required">
+						<span class="label-input100">Telephone Number</span>
+						<input class="input100" type="text" name="Telno" placeholder="Enter Telephone Number">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-26" data-validate="EmailAdmin is required">
+						<span class="label-input100">EmailAdmin</span>
+						<input class="input100" type="email" name="EmailAdmin" placeholder="Enter EmailAdmin">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
+					
+
+					<div class="container-login100-form-btn">
+						<a href="AdminSystemHome.html" class="back100-form-btn" style="color:#fff;cursor:pointer;">
+							Back
+						</a>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						<button class="login100-form-btn">
+							Save
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

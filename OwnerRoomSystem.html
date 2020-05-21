@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		.sd-container {
+		  position: relative;
+		  float: left;
+		}
+		
+		.sd {
+		  border: 1px solid #1cbaa5;
+		  padding: 5px 0px;
+		  height: 30px;
+		  width: 160px;
+		}
+		
+		.open-button {
+		  position: absolute;
+		  top: 5px;
+		  right: 3px;
+		  width: 20px;
+		  height: 20px;
+		  background: #fff;
+		  pointer-events: none;
+		}
+		
+		.open-button button {
+		  border: none;
+		  background: transparent;
+		}
+		</style>
+<head>
+	<title>Login V15</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+<ul>
+	<li><a href="Home.html">Home</a></li>
+	<li style="float:right"><a class="active" href="Home.html">Sign Out</a></li>
+  </ul>
+	
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Owner Room System
+					</span>
+				</div>
+
+				<form class="login100-form validate-form">
+					
+					<!-- <div class="wrap-input100 validate-input m-b-26" data-validate="ProjectName is required">
+						<span class="label-input100">ProjectName</span>
+						<input class="input100" type="text" name="ProjectName" placeholder="Enter ProjectName">
+						<span class="focus-input100"></span>
+					</div> -->
+					
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">ProjectName</span>
+						<select class="input100" name="ProjectName" id="ProjectName" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a ProjectName
+						</option> 
+							<option value="Project1">Project 1</option> 
+							<option value="Project2">Project 2</option> 
+							<option value="Project3">Project 3</option> 
+							<option value="Project4">Project 4</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					
+
+					<!-- <div class="wrap-input100 validate-input m-b-18" data-validate = "Building Name is required">
+						<span class="label-input100">Building Name</span>
+						<input class="input100" type="text" name="BuildingName" placeholder="Enter Building Name">
+						<span class="focus-input100"></span>
+					</div> -->
+
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">BuildName</span>
+						<select class="input100" name="BuildName" id="BuildName" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a BuildName 
+						</option> 
+							<option value="BuildName1">BuildName 1</option> 
+							<option value="BuildName2">BuildName 2</option> 
+							<option value="BuildName3">BuildName 3</option> 
+							<option value="BuildName4">BuildName 4</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor1" name="Floor1" value="Floor1">   Floor1</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor2" name="Floor2" value="Floor2">   Floor2</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor3" name="Floor3" value="Floor3">   Floor3</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-26" >
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor4" name="Floor4" value="Floor4">   Floor4</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor5" name="Floor5" value="Floor5">   Floor5</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">
+						  <label><input type="checkbox" id="Floor6" name="Floor6" value="Floor6">   Floor6</label>
+						</span>
+						<input class="input100" type="number" name="RoomNumber" placeholder="Enter RoomNumber">
+						<span class="focus-input100"></span>
+					</div>
+					
+					
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="FirstName is required">
+						<span class="label-input100">FirstName</span>
+						<input class="input100" type="text" name="FirstName" placeholder="Enter FirstName">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="LastName is required">
+						<span class="label-input100">LastName</span>
+						<input class="input100" type="text" name="LastName" placeholder="Enter LastName">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Citizen ID is required">
+						<span class="label-input100">Citizen ID</span>
+						<input class="input100" type="text" name="CitizenID" placeholder="Enter Citizen ID">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="Email" placeholder="Enter Email">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="password" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
+
+
+
+
+
+					<div class="container-login100-form-btn">
+						<a href="AdminBuildingLogin.html" class="back100-form-btn" style="color:#fff;cursor:pointer;">
+							Back
+						</a>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						<button class="login100-form-btn">
+							Save
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

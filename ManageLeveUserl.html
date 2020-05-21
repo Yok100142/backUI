@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<title>Login V15</title>
+	<meta charset="UTF-8">
+	<!-- ================================================================================================= -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+	<!-- ================================================================================ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<style>
+		.sd-container {
+		  position: relative;
+		  float: left;
+		}
+		
+		.sd {
+		  border: 1px solid #1cbaa5;
+		  padding: 5px 0px;
+		  height: 30px;
+		  width: 160px;
+		}
+	
+		
+		.open-button {
+		  position: absolute;
+		  top: 5px;
+		  right: 3px;
+		  width: 20px;
+		  height: 20px;
+		  background: #fff;
+		  pointer-events: none;
+		}
+		
+		.open-button button {
+		  border: none;
+		  background: transparent;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: transparent;
+			}
+
+		</style>
+<body>
+
+
+	<ul style='background-color: #333';>
+		<li><a href="Home.html">Home</a></li>
+		<li><a href="AdminSystemHome.html">Admin System Home</a></li>
+		<li style="float:right"><a class="active" href="Home.html">Sign Out</a></li>
+	</ul>
+	
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Manage Level User
+					</span>
+				</div>
+
+				<form class="login100-form validate-form">
+					
+					
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">Permissions level</span>
+						<select class="input100" name="Permissionslevel" id="ProjectName" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a Permissions level
+						</option> 
+							<option value="AdminBuilding">Admin Building</option> 
+							<option value="AdminSystem">Admin System</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">ProjectName</span>
+						<select class="input100" name="ProjectName" id="ProjectName" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a ProjectName
+						</option> 
+							<option value="Project1">Project 1</option> 
+							<option value="Project2">Project 2</option> 
+							<option value="Project3">Project 3</option> 
+							<option value="Project4">Project 4</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">BuildName</span>
+						<select class="input100" name="BuildName" id="BuildName" style="height: 40px;cursor: pointer;" > 
+							<option value="none" selected disabled hidden> 
+							Select a BuildName 
+						</option> 
+							<option value="all">all</option>
+							<option value="BuildName1">BuildName 1</option> 
+							<option value="BuildName2">BuildName 2</option> 
+							<option value="BuildName3">BuildName 3</option> 
+							<option value="BuildName4">BuildName 4</option> 
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">BuildName</span>
+							<select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 100%;">
+								<!-- <option value="none" selected disabled hidden> 
+							Select a BuildName 
+						</option>  -->
+							<option value="all" style="width: 100%;">all</option>
+							<option value="BuildName1">BuildName 1</option> 
+							<option value="BuildName2">BuildName 2</option> 
+							<option value="BuildName3">BuildName 3</option> 
+							<option value="BuildName4">BuildName 4</option> 
+							</select>
+					<span class="focus-input100"></span>
+					</div>
+	
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="Email" placeholder="Enter Email">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="password" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">confirm password</span>
+						<input class="input100" type="confirm password" name="confirm password" placeholder="confirm password">
+						<span class="focus-input100"></span>
+					</div>
+
+				
+					<div class="container-login100-form-btn">
+						<a href="AdminSystemHome.html" class="back100-form-btn" style="color:#fff;cursor:pointer;">
+							Back
+						</a>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						<button class="login100-form-btn">
+							Save
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
